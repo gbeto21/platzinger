@@ -1,7 +1,8 @@
+<input type="text" placeholder="Buscar amigo" [(ngModel)]="query">
 <br/>
 <b>Amigos</b>
-<ng-container *ngFor="let friend of friends; let i = index" >
-    <div *ngIf="friend.friend">
+<ng-container *ngFor="let friend of friends | search: query; let i = index" >
+    <div>
         <a routerLink="/conversation/{{friend.uid}}">
             {{i}}. {{friend.nick}}
         </a>
@@ -9,9 +10,3 @@
 
 </ng-container>
 
-<b>No agregados</b> 
-<ng-container *ngFor="let friend of friends; let i = index" >
-    <p *ngIf="!friend.friend" >
-        {{i}}. {{friend.nick}}
-    </p>
-</ng-container>
