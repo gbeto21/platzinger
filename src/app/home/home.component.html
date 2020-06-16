@@ -3,6 +3,7 @@
 <b>Amigos</b>
 <ng-container *ngFor="let friend of friends | search: query; let i = index" >
     <div>
+        <img class="statusIcon" src="./assets/img/logo_live_{{friend.status}}.png" alt="Estatus contacto">
         <a routerLink="/conversation/{{friend.uid}}">
             {{i}}. {{friend.nick}}
         </a>
