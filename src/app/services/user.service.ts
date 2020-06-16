@@ -21,4 +21,12 @@ export class UserService {
     return this.friends
   }
 
+  getFriend(uid: any)
+  {
+    const foundUser = this.friends.find( (friend) => {
+      return friend.uid == uid;
+    });
+    return foundUser;
+  }
+
 }

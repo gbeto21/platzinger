@@ -11,13 +11,13 @@ import { User } from '../interfaces/user';
 export class ConversationComponent implements OnInit {
 
   friendId: any;
-  friends: User[];
+  friend: User;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService) {
     this.friendId = this.activatedRoute.snapshot.params['uid']
-    this.friends = this.userService.getFriends()
+    this.friend = this.userService.getFriend(this.friendId)
   }
 
   ngOnInit(): void {
