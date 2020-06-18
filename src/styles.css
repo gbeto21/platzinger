@@ -24,3 +24,17 @@
 .generalContent{
     margin-top: 56px;
 }
+
+#homeAvatarPicture{
+    max-width: 100px;
+}
+
+.avatarFrameOnLine{
+    background: rgb(0,252,255);
+    background: linear-gradient(0deg, rgba(0,252,255,1) 0%, rgba(0,119,83,1) 100%);
+    text-align: center;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: inline-block;
+}
