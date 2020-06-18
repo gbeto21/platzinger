@@ -38,3 +38,11 @@
     border: 1px solid white;
     display: inline-block;
 }
+
+.disblo{
+    display: block !important;
+}
+
+.marbo5{
+    margin-bottom: 5px;
+}
