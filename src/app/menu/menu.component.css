@@ -1,3 +1,28 @@
 #main-logo{
-    width: 60px;
+    width: 40px;
+}
+
+#menuContainer{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(0,119,83,1) 100%);
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    height: 56px;
+    top: 0px;
+    border-top: 1px solid white;
+}
+
+.branding{
+    padding: 5px !important;
+    border-top: none !important;
+    border-right: none !important;
+}
+
+#menuContainer> .item{
+    padding: 15px;
+    color: white;
+    cursor: default;
+    border: 1px solid white;
+    display: inline-block;
 }
