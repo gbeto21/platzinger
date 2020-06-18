@@ -15,7 +15,15 @@ export class HomeComponent implements OnInit {
   constructor(
     private userService:UserService
   ) {
-    this.friends = this.userService.getFriends()
+    this.userService.getUsers()
+                    .valueChanges()
+                    .subscribe(
+                      (data: User[])=>{
+                        this.friends = data
+                      }, 
+                      (error)=>{ 
+                        console.error(error);
+                      })
   }
 
   ngOnInit(): void {
